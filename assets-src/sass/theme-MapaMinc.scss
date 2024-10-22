@@ -14,9 +14,11 @@ $spaces-500: #4cac33;
 
 // Home 
 $home-feature: $secondary-500 !default;
-$home-register: rgba($primary-500, 0) !default; // Totalmente transparente
+$home-register: rgba($primary-500, 0); // Totalmente transparente
+$home-header-gradient: rgba($primary-500, 0); // Totalmente transparente
 
 :root {
-    --mc-home-header-gradient: rgba($primary-500, 0);
-    --mc-home-feature: #{$secondary-500};
+    --mc-home-header-gradient: $home-header-gradient;
+    --mc-home-feature: $home-feature;
+    --mc-home-register: $home-register;
 }
