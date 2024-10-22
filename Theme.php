@@ -20,6 +20,6 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
     {
         parent::_init();
 
-        $this->enqueueStyle('app-v2', 'main', 'css/theme-MapaMinc.css');
+        $this->enqueueStyle('app-v2', 'main', 'css/theme-MapaMinC.css');
     }
 }
