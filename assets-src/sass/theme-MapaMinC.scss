@@ -1,7 +1,5 @@
 @use 'sass:color';
 
-@import '../../../BaseV2/assets-src/sass/theme-BaseV2';
-
 $primary-500: #117C83;
 $secondary-500: #9eca80;
 
@@ -22,3 +20,5 @@ $home-header-gradient: rgba($primary-500, 0);
     --mc-home-feature: #{$home-feature};
     --mc-home-register: #{$home-register};
 }
+
+@import '../../../BaseV2/assets-src/sass/theme-BaseV2';
