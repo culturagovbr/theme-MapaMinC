@@ -15,7 +15,7 @@ return [
     'text:home-entities.opportunities' => 'Aqui você pode fazer sua inscrição nos editais e oportunidades do Ministério da Cultura (Minc), bem como acompanhar as inscrições em andamento. Nesse espaço, você também pode acessar outras oportunidades da cultura; tais como, oficinas, prêmios e concursos; criar uma oportunidade e divulgá-la para outros agentes culturais.',
     'text:home-entities.events' => 'Você pode pesquisar eventos culturais cadastrados na plataforma filtrando por região, área da cultura, etc. Você também pode incluir seus eventos culturais na plataforma e divulgá-los gratuitamente.',
     'text:home-entities.spaces' => 'Aqui você pode cadastrar seus espaços culturais e colaborar com o Mapa da Cultura! Além disso, você pode pesquisar por espaços culturais cadastrados na sua região; tais como teatros, bibliotecas, centros culturais e outros.',
-    'text:home-entities.agents' => 'Ne  ste espaço, é possível buscar e conhecer os agentes culturais cadastrados no Mapa da Cultura. Explore a diversidade de artistas, produtores, grupos, coletivos, bandas, instituições, que fazem parte da cultura! Participe e seja protagonista da cultura brasileira!',
+    'text:home-entities.agents' => 'Neste espaço, é possível buscar e conhecer os agentes culturais cadastrados no Mapa da Cultura. Explore a diversidade de artistas, produtores, grupos, coletivos, bandas, instituições, que fazem parte da cultura! Participe e seja protagonista da cultura brasileira!',
     'text:home-entities.projects' => 'Aqui você encontra projetos culturais cadastrados pelos agentes culturais usuários da plataforma Mapa da Cultura.',
 
     // Tela inicial (Mapa)
