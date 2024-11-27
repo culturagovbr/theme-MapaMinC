@@ -1,7 +1,9 @@
 <?php
 return [
-    'logo.color1' => env('LOGO_COLOR1', '#666'),
-    'logo.color2' => env('LOGO_COLOR1', '#999'),
+    // 'logo.title' => 'MAPA DA',
+    // 'logo.subtitle' => 'CULTURA',	
+    'logo.image' => 'img/main-logo.svg',
+    'logo.hideLabel' => true,
 
     // Tela inicial (Banner)
     'text:home-header.title' => '&nbsp;',
