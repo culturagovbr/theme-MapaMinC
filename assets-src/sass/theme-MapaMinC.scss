@@ -13,12 +13,12 @@ $spaces-500: #4cac33;
 // Home 
 $home-feature: $secondary-500;
 $home-register: rgba($primary-500, 0);
-$home-header-gradient: rgba($primary-500, 0);
+$home-header-gradient: rgba($primary-500, 0) !default;
+
+@import '../../../BaseV2/assets-src/sass/theme-BaseV2';
 
 :root {
-    --mc-home-header-gradient: #{$home-header-gradient};
+    --mc-home-header-gradient: rgba($primary-500, 0);
     --mc-home-feature: #{$home-feature};
     --mc-home-register: #{$home-register};
 }
-
-@import '../../../BaseV2/assets-src/sass/theme-BaseV2';
