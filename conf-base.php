@@ -34,5 +34,8 @@ return [
     'text:search-map.spaceText' => 'Aqui você pode cadastrar seus espaços culturais e colaborar com o Mapa da Cultura! Além disso, você pode pesquisar por espaços culturais cadastrados na sua região; tais como teatros, bibliotecas, centros culturais e outros.',
 
     // Main Footer
-    'text:main-footer.description' => 'Dúvidas ou problemas com o sistema entrar em <br> contato pelo e-mail <a href="mailto:suporte.mapa@cultura.gov.br" style="color: #00a2f0; display: inline; font-weight: bold;">suporte.mapa@cultura.gov.br</a>'
+    'text:main-footer.description' => 'Dúvidas ou problemas com o sistema entrar em <br> contato pelo e-mail <a href="mailto:suporte.mapa@cultura.gov.br" style="color: #00a2f0; display: inline; font-weight: bold;">suporte.mapa@cultura.gov.br</a>',
+
+    // Área Dos Desenvolvedores
+    'text:home-developers.description' => 'O Mapa da Cultura é um software livre de gestão do fomento à cultura e mapeamento colaborativo. Ele foi criado de forma colaborativa pela hacklab/, órgãos públicos de cultura, organizações não governamentais, empresas e coletivos que acreditam na plataforma. Você pode contribuir para o seu desenvolvimento através do GitHub.'
 ];
