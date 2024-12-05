@@ -1,0 +1,24 @@
+@use 'sass:color';
+
+$primary-500: #117C83;
+$secondary-500: #9eca80;
+
+// COLORS
+$agents-500: #9c4d16;
+$events-500: #e62f76;
+$opportunities-500: #f08418;
+$projects-500:  #3666ae;
+$spaces-500: #4cac33;
+
+// Home 
+$home-feature: $secondary-500;
+$home-register: rgba($primary-500, 0);
+$home-header-gradient: rgba($primary-500, 0) !default;
+
+@import '../../../BaseV2/assets-src/sass/theme-BaseV2';
+
+:root {
+    --mc-home-header-gradient: rgba($primary-500, 0);
+    --mc-home-feature: #{$home-feature};
+    --mc-home-register: #{$home-register};
+}
