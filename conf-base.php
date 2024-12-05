@@ -23,7 +23,7 @@ return [
     'text:home-map.description' => 'Os agentes, espaços e eventos culturais cadastrados podem ser vistos a partir de sua localização no mapa do Brasil. Encontre-os aqui:',
 
     // Tela inicial (área de cadastro)
-    'text:home-register.title' => 'Faça seu cadastro e colabore com o Mapa da Cultura',
+    'text:home-register.title' => 'Faça seu cadastro e colabore com o Mapa da Cultura!',
     'text:home-register.description' => 'Participe dessa plataforma livre, colaborativa e interativa de mapeamento cultural brasileiro. Ao se cadastrar no Mapa da Cultura, você fará parte de uma rede de fazedores de cultura e ainda fortalecerá a gestão de cultura do Brasil.',
 
     // Texto que será exibido nas buscas do Google
