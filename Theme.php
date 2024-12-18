@@ -1,6 +1,6 @@
 <?php
 
-namespace MapasCulturais\Themes\MapaMinC;
+namespace MapaMinC;
 
 use MapasCulturais\i;
 use MapasCulturais\App;
