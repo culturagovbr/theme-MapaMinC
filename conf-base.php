@@ -37,5 +37,8 @@ return [
     'text:main-footer.description' => 'Dúvidas ou problemas com o sistema entrar em <br> contato pelo e-mail <a href="mailto:suporte.mapa@cultura.gov.br" style="color: #00a2f0; display: inline; font-weight: bold;">suporte.mapa@cultura.gov.br</a>',
 
     // Área Dos Desenvolvedores
-    'text:home-developers.description' => 'O Mapa da Cultura é um software livre de gestão do fomento à cultura e mapeamento colaborativo. Ele foi criado de forma colaborativa pela hacklab/, órgãos públicos de cultura, organizações não governamentais, empresas e coletivos que acreditam na plataforma. Você pode contribuir para o seu desenvolvimento através do GitHub.'
+    'text:home-developers.description' => 'O Mapa da Cultura é um software livre de gestão do fomento à cultura e mapeamento colaborativo. Ele foi criado de forma colaborativa pela hacklab/, órgãos públicos de cultura, organizações não governamentais, empresas e coletivos que acreditam na plataforma. Você pode contribuir para o seu desenvolvimento através do GitHub.',
+
+    // Customização de campos para a exportação de lista de incrsitos
+    'field:bankFields' => "Tipo: {account_type} | Banco: {number} | Agência: {branch}-{dv_branch} | Conta: {account_number}-{dv_account_number}",
 ];
