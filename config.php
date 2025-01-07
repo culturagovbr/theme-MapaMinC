@@ -1,6 +1,6 @@
 <?php
 return [
-    'app.siteName' => 'Caneta',
+    'app.siteName' => 'Mapa da Cultura',
     'app.siteDescription' => 'O Mapas Culturais é uma plataforma livre para mapeamento cultural.',
 
     "module.FAQ" => [
