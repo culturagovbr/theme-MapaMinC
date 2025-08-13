@@ -19,7 +19,15 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
     function _init()
     {
         parent::_init();
+        $app = App::i();
 
         $this->enqueueStyle('app-v2', 'main', 'css/theme-MapaMinC.css');
+
+        // Implementação de ícones personalizados
+        $app->hook('component(mc-icon).iconset', function(&$iconset) {
+            $iconset['cultura-viva-1'] = 'bi:person-arms-up';
+            $iconset['cultura-viva-3'] = 'ph:person-arms-spread-fill';
+        });
+
     }
 }
