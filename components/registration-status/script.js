@@ -124,19 +124,17 @@ app.component('registration-status', {
         },
         verifyState(registration) {
             const phaseOpportunity = this.opportunity;
+            const isLastPhase = phaseOpportunity.isLastPhase === true;
+            const isPublished = this.isFinalResultPublished;
             
-            // Se é a primeira fase, sempre retorna success
-            if (phaseOpportunity.isFirstPhase) {
-                return 'success__color';
-            }
-
-            // Se é a última fase, retorna success se a inscrição foi selecionada, caso contrário, retorna danger
-            if (phaseOpportunity.isLastPhase) {
+            // Última fase COM publicação final: retorna success se selecionada, caso contrário danger
+            if (isLastPhase && isPublished) {
                 return registration.status === 10 ? 'success__color' : 'danger__color';
             }
 
-            // Fase intermediária: se resultado final foi publicado, retorna success (Análise Encerrada), caso contrário, retorna warning (Em Análise)
-            return this.isFinalResultPublished ? 'success__color' : 'warning__color';
+            // Fase intermediária OU última fase sem publicação: 
+            // Se publicado -> success (verde), se não publicado -> warning (laranja/amarelo)
+            return isPublished ? 'success__color' : 'warning__color';
         },
 
         showStatus(registration) {
