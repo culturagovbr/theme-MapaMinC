@@ -9,7 +9,7 @@ use MapasCulturais\App;
  * @method void import(string $components) Importa lista de componentes Vue. * 
  */
 class Theme extends \MapasCulturais\Themes\BaseV2\Theme
-// class Theme extends \MapasCulturais\Theme
+    // class Theme extends \MapasCulturais\Theme
 {
     static function getThemeFolder()
     {
@@ -19,6 +19,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
     function _init()
     {
         parent::_init();
+
+        $app = App::i();
+
+        unset($app->config['Metabase']['config']['links']['painel-espacos']);
 
         $this->enqueueStyle('app-v2', 'main', 'css/theme-MapaMinC.css');
     }
