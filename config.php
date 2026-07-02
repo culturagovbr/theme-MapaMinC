@@ -72,5 +72,314 @@ return [
             'title' => "Certificado de solicitação de recurso",
             'template' => 'claim_certificate.html'
         ],
+    ],
+
+    # METABASE
+    'Metabase' => [
+        'config' => [
+            'links' => [
+                'painel-agentes' => [
+                    'link' => env('METABASE_MINC_AGENT_PANEL', null), // dashboard dos agentes
+                    'text' => 'Agentes Culturais',
+                    'title' => 'Agentes Culturais',
+                    'entity' => 'Agent'
+                ],
+                'painel-espacos' => [
+                    'link' => env('METABASE_MINC_SPACE_PANEL', null), // dashboard dos espaços
+                    'text' => 'Saiba os números de espaços cadastrados, quantos são criados mensalmente, por onde estão distribuídos no território e outras informações.',
+                    'title' => 'Painel sobre espaços',
+                    'entity' => 'Space'
+                ],
+                'painel-oportunidades' => [
+                    'link' => env('METABASE_MINC_OPPORTUNITY_PANEL', null), //dashboard das oportunidade
+                    'text' => 'Ações Culturais e Instrumentos de Fomento',
+                    'title' => 'Ações Culturais e Instrumentos de Fomento',
+                    'entity' => 'Opportunity'
+                ],
+            ],
+            'cards' => [
+                'home' => [
+                    [
+                        'type' => 'space',
+                        'label' => '',
+                        'icon' => 'space',
+                        'iconClass' => 'space__color',
+                        'panelLink' => 'painel-espacos',
+                        'data' => [
+                            [
+                                'icon' => 'space',
+                                'label' => 'Espaços cadastrados',
+                                'entity' => 'MapasCulturais\\Entities\\Space',
+                                'query' => [],
+                                'value' => null
+                            ],
+                        ]
+                    ],
+                    [
+                        'type' => 'space',
+                        'label' => '',
+                        'icon' => 'space',
+                        'iconClass' => 'space__color',
+                        'panelLink' => 'painel-espacos',
+                        'data' => [
+                            [
+                                'icon' => 'space',
+                                'label' => 'Espaços certificados',
+                                'entity' => 'MapasCulturais\\Entities\\Space',
+                                'query' => [
+                                    '@verified' => 1
+                                ],
+                                'value' => null
+                            ]
+                        ]
+                    ],
+                    [
+                        'type' => 'agent',
+                        'label' => '',
+                        'icon' => 'agent',
+                        'iconClass' => 'agent__color',
+                        'panelLink' => 'painel-agentes',
+                        'data' => [
+                            [
+                                'icon' => 'agent',
+                                'label' => 'Agentes cadastrados',
+                                'entity' => 'MapasCulturais\\Entities\\Agent',
+                                'query' => [],
+                                'value' => null
+                            ],
+                        ]
+                    ],
+                    [
+                        'type' => 'agent',
+                        'label' => '',
+                        'icon' => 'agent',
+                        'iconClass' => 'agent__color',
+                        'panelLink' => 'painel-agentes',
+                        'data' => [
+                            [
+                                'icon' => 'agent',
+                                'label' => 'Agentes individuais',
+                                'entity' => 'MapasCulturais\\Entities\\Agent',
+                                'query' => ['type' => 'EQ(1)'],
+                                'value' => null
+                            ],
+                        ]
+                    ],
+                    [
+                        'type' => 'agent',
+                        'label' => '',
+                        'icon' => 'agent',
+                        'iconClass' => 'agent__color',
+                        'panelLink' => 'painel-agentes',
+                        'data' => [
+                            [
+                                'icon' => 'agent',
+                                'label' => 'Agentes coletivos',
+                                'entity' => 'MapasCulturais\\Entities\\Agent',
+                                'query' => ['type' => 'EQ(2)'],
+                                'value' => null
+                            ],
+                        ]
+                    ],
+                    // opportunity
+                    [
+                        'type' => 'opportunity',
+                        'label' => 'Oportunidades',
+                        'icon' => 'opportunity',
+                        'iconClass' => 'opportunity__color',
+                        'panelLink' => 'painel-oportunidades',
+                        'data' => [
+                            [
+                                'label' => 'Oportunidades criadas',
+                                'entity' => 'MapasCulturais\\Entities\\Opportunity',
+                                'query' => [],
+                                'value' => null
+                            ],
+                            [
+                                'label' => 'Oportunidades certificadas',
+                                'entity' => 'MapasCulturais\\Entities\\Opportunity',
+                                'query' => [
+                                    '@verified' => 1
+                                ],
+                                'value' => null
+                            ],
+                        ]
+                    ]
+
+                ],
+                'entities' => [
+                    [
+                        'type' => 'space',
+                        'label' => '',
+                        'icon' => 'space',
+                        'iconClass' => 'space__color',
+                        'panelLink' => 'painel-espacos',
+                        'data' => [
+                            [
+                                'id' => 'espacos-cadastrados',
+                                'icon' => 'space',
+                                'label' => 'Espaços cadastrados',
+                                'entity' => 'MapasCulturais\\Entities\\Space',
+                                'query' => [],
+                                'value' => null
+                            ],
+                        ]
+                    ],
+                    [
+                        'type' => 'space',
+                        'label' => '',
+                        'icon' => 'space',
+                        'iconClass' => 'space__color',
+                        'panelLink' => 'painel-espacos',
+                        'data' => [
+                            [
+                                'id' => 'espacos-certificados',
+                                'icon' => 'space',
+                                'label' => 'Espaços certificados',
+                                'entity' => 'MapasCulturais\\Entities\\Space',
+                                'query' => [
+                                    '@verified' => 1
+                                ],
+                                'value' => null
+                            ]
+                        ]
+                    ],
+                    [
+                        'type' => 'agent',
+                        'label' => '',
+                        'icon' => 'agent',
+                        'iconClass' => 'agent__color',
+                        'panelLink' => 'painel-agentes',
+                        'data' => [
+                            [
+                                'id' => 'agentes-cadastrados',
+                                'icon' => 'agent',
+                                'label' => 'Agentes cadastrados',
+                                'entity' => 'MapasCulturais\\Entities\\Agent',
+                                'query' => [],
+                                'value' => null
+                            ],
+                        ]
+                    ],
+                    [
+                        'type' => 'agent',
+                        'label' => '',
+                        'icon' => 'agent',
+                        'iconClass' => 'agent__color',
+                        'panelLink' => 'painel-agentes',
+                        'data' => [
+                            [
+                                'id' => 'agentes-individuais',
+                                'icon' => 'agent',
+                                'label' => 'Agentes individuais',
+                                'entity' => 'MapasCulturais\\Entities\\Agent',
+                                'query' => ['type' => 'EQ(1)'],
+                                'value' => null
+                            ],
+                        ]
+                    ],
+                    [
+                        'type' => 'agent',
+                        'label' => '',
+                        'icon' => 'agent',
+                        'iconClass' => 'agent__color',
+                        'panelLink' => 'painel-agentes',
+                        'data' => [
+                            [
+                                'id' => 'agentes-coletivos',
+                                'icon' => 'agent',
+                                'label' => 'Agentes coletivos',
+                                'entity' => 'MapasCulturais\\Entities\\Agent',
+                                'query' => ['type' => 'EQ(2)'],
+                                'value' => null
+                            ],
+                        ]
+                    ],
+                    [
+                        'type' => 'agent',
+                        'label' => '',
+                        'icon' => 'agent',
+                        'iconClass' => 'agent__color',
+                        'panelLink' => 'painel-agentes',
+                        'data' => [
+                            [
+                                'id' => 'agentes-cadastrados-7-dias',
+                                'icon' => 'agent',
+                                'label' => 'Cadastrados nos últimos 7 dias',
+                                'entity' => 'MapasCulturais\\Entities\\Agent',
+                                'query' => [
+                                    '@select' => 'createTimestamp'
+                                ],
+                                'value' => null
+                            ],
+                        ]
+                    ],
+                    [
+                        'type' => 'opportunity',
+                        'label' => 'Oportunidades',
+                        'icon' => 'opportunity',
+                        'iconClass' => 'opportunity__color',
+                        'panelLink' => 'painel-oportunidades',
+                        'data' => [
+                            [
+                                'icon' => 'opportunity',
+                                'label' => 'Oportunidades criadas',
+                                'entity' => 'MapasCulturais\\Entities\\Opportunity',
+                                'query' => [],
+                                'value' => null
+                            ],
+                        ]
+                    ],
+                    [
+                        'type' => 'opportunity',
+                        'label' => 'Oportunidades certificadas',
+                        'icon' => 'opportunity',
+                        'iconClass' => 'opportunity__color',
+                        'panelLink' => 'painel-oportunidades',
+                        'data' => [
+                            [
+                                'icon' => 'opportunity',
+                                'label' => 'Oportunidades certificadas',
+                                'entity' => 'MapasCulturais\\Entities\\Opportunity',
+                                'query' => [
+                                    '@verified' => 1
+                                ],
+                                'value' => null
+                            ],
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ],
+
+    # AUTENTICAÇÃO
+    'auth.provider' => '\MultipleLocalAuth\Provider',
+    'auth.config' => [
+        'salt' => env('AUTH_SALT', 'SECURITY_SALT'),
+        'wizard' => env('AUTH_WIZARD_ENABLED', false),
+        'timeout' => '24 hours',
+        'strategies' => [
+            'govbr' => [
+                'visible' => env('AUTH_GOV_BR_VISIBLE', false),
+                'response_type' => env('AUTH_GOV_BR_RESPONSE_TYPE', 'code'),
+                'client_id' => env('AUTH_GOV_BR_CLIENT_ID', null),
+                'client_secret' => env('AUTH_GOV_BR_SECRET', null),
+                'scope' => env('AUTH_GOV_BR_SCOPE', null),
+                'redirect_uri' => env('AUTH_GOV_BR_REDIRECT_URI', null), 
+                'auth_endpoint' => env('AUTH_GOV_BR_ENDPOINT', null),
+                'token_endpoint' => env('AUTH_GOV_BR_TOKEN_ENDPOINT', null),
+                'nonce' => env('AUTH_GOV_BR_NONCE', null),
+                'code_verifier' => env('AUTH_GOV_BR_CODE_VERIFIER', null),
+                'code_challenge' => env('AUTH_GOV_BR_CHALLENGE', null),
+                'code_challenge_method' => env('AUTH_GOV_BR_CHALLENGE_METHOD', null),
+                'userinfo_endpoint' => env('AUTH_GOV_BR_USERINFO_ENDPOINT', null),
+                'state_salt' => env('AUTH_GOV_BR_STATE_SALT', null),
+                'applySealId' => env('AUTH_GOV_BR_APPLY_SEAL_ID', null),
+                'menssagem_authenticated' => env('AUTH_GOV_BR_MENSSAGEM_AUTHENTICATED','Usuário já se autenticou pelo GovBr'),
+                'dic_agent_fields_update' => json_decode(env('AUTH_GOV_BR_DICT_AGENT_FIELDS_UPDATE', '{}'), true),
+                'url_logout' => env('AUTH_GOV_BR_URL_LOGOUT', 'https://sso.staging.acesso.gov.br/logout'),
+            ]
+        ]
     ]
 ];
