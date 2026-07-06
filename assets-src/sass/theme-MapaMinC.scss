@@ -56,3 +56,24 @@ $defeso-border: #dcdcdc;
         color: $defeso-title;
     }
 }
+
+// Item 3 — arte de fundo do bloco "Faça seu cadastro e colabore com o Mapa
+// da Cultura!". O texto do conteúdo é branco por cima da foto; sem a foto,
+// escurecemos o texto sobre o fundo neutro.
+.home-register {
+    background-color: $defeso-neutral;
+
+    &__background--img {
+        visibility: hidden;
+    }
+
+    &__content {
+        color: $defeso-title;
+    }
+
+    // Sem a foto de fundo, o botão (branco com texto verde) perde definição.
+    // Borda na mesma cor verde do texto para delimitá-lo.
+    &__content--button {
+        border: 1px solid var(--mc-secondary-500);
+    }
+}
