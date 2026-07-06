@@ -22,3 +22,37 @@ $home-header-gradient: rgba($primary-500, 0) !default;
     --mc-home-feature: #{$home-feature};
     --mc-home-register: #{$home-register};
 }
+
+// Defeso eleitoral (solicitação ASCOM) — remoção temporária das artes de
+// identidade visual da home, substituindo por fundo neutro claro com texto
+// escuro para manter a legibilidade. Reversível: basta remover estes blocos.
+$defeso-neutral: #f9f9f9;
+$defeso-title: #333333;
+$defeso-border: #dcdcdc;
+
+// Item 4 — fotos dos cards de entidades (Oportunidades, Eventos, Espaços,
+// Agentes, Projetos).
+.home-entities__content--cards {
+    .card {
+        border: 1px solid $defeso-border;
+    }
+
+    .card__left--img {
+        background-color: $defeso-neutral;
+
+        img {
+            visibility: hidden;
+        }
+    }
+
+    // O BaseV2 aplica um overlay escuro (rgba(0,0,0,.3)) sobre a coluna
+    // esquerda para dar contraste ao texto branco por cima da foto. Sem a
+    // foto, esse overlay escurece o fundo neutro — neutralizamos aqui.
+    .card__left--content {
+        background-color: transparent;
+    }
+
+    .card__left--content-title .title {
+        color: $defeso-title;
+    }
+}
