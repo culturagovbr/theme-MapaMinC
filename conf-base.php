@@ -2,7 +2,10 @@
 return [
     // 'logo.title' => 'MAPA DA',
     // 'logo.subtitle' => 'CULTURA',	
-    'logo.image' => 'img/main-logo.svg',
+    // Defeso eleitoral (ASCOM): logo sem o símbolo, apenas texto "Mapa da Cultura".
+    // Versão "bold" (stroke) para o nav/rodapé — em tamanho pequeno o traço fino
+    // do regular aparenta menos densidade que o banner; o banner usa o regular.
+    'logo.image' => 'img/home/home-header/logo-mapa-defeso-bold.svg',
     'logo.hideLabel' => true,
 
     // Tela inicial (Banner)
