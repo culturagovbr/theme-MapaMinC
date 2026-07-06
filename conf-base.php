@@ -8,6 +8,11 @@ return [
     'logo.image' => 'img/home/home-header/logo-mapa-defeso-bold.svg',
     'logo.hideLabel' => true,
 
+    // Defeso eleitoral (ASCOM): favicon neutro (letra "M") no lugar do símbolo
+    // do Mapa da Cultura.
+    'favicon.svg' => 'img/favicon-defeso.svg',
+    'favicon.180' => 'img/favicon-defeso-180.png',
+
     // Tela inicial (Banner)
     'text:home-header.title' => '&nbsp;',
     'text:home-header.description' => '&nbsp;',
