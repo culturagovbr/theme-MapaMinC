@@ -77,3 +77,10 @@ $defeso-border: #dcdcdc;
         border: 1px solid var(--mc-secondary-500);
     }
 }
+
+// Item 1 — logo (só texto) no rodapé: espaço extra abaixo do logo, antes das
+// colunas. Aplicado no wrapper do rodapé (o .theme-logo é flex e não expande
+// com margem no filho); escopa só ao rodapé, sem afetar o logo do topo.
+.main-footer__content--logo-img {
+    margin-bottom: 2.5rem;
+}
