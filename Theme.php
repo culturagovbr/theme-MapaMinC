@@ -20,8 +20,6 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
         parent::_init();
         $app = App::i();
 
-        $app = App::i();
-
         unset($app->config['Metabase']['config']['links']['painel-espacos']);
 
         $this->enqueueStyle('app-v2', 'main', 'css/theme-MapaMinC.css');
