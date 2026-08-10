@@ -49,4 +49,7 @@ return [
 
     // Customização de campos para a exportação de lista de incrsitos
     'field:bankFields' => "Tipo: {account_type} | Banco: {number} | Agência: {branch}-{dv_branch} | Conta: {account_number}-{dv_account_number}",
+
+    'rybena.enabled' => env('RYBENA_ENABLED', false),
+    'rybena.script' => env('RYBENA_SCRIPT', 'https://cdn.rybena.com.br/dom/master/latest/rybena.js?positionPlayer=right&size=300&lang=ptBR'),
 ];
