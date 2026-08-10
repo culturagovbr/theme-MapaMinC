@@ -24,6 +24,10 @@ class Theme extends \MapasCulturais\Themes\BaseV2\Theme
 
         $this->enqueueStyle('app-v2', 'main', 'css/theme-MapaMinC.css');
 
+        if ($app->config['rybena.enabled']) {
+            $this->enqueueScript('app-v2', 'rybena', $app->config['rybena.script']);
+        }
+
         // Implementação de ícones personalizados
         $app->hook('component(mc-icon).iconset', function(&$iconset) {
             $iconset['cultura-viva-1'] = 'bi:person-arms-up';
