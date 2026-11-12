@@ -23,27 +23,6 @@ $home-header-gradient: rgba($primary-500, 0) !default;
     --mc-home-register: #{$home-register};
 }
 
-// Item 3 — arte de fundo do bloco "Faça seu cadastro e colabore com o Mapa
-// da Cultura!". O texto do conteúdo é branco por cima da foto; sem a foto,
-// escurecemos o texto sobre o fundo neutro.
-.home-register {
-    background-color: $defeso-neutral;
-
-    &__background--img {
-        visibility: hidden;
-    }
-
-    &__content {
-        color: $defeso-title;
-    }
-
-    // Sem a foto de fundo, o botão (branco com texto verde) perde definição.
-    // Borda na mesma cor verde do texto para delimitá-lo.
-    &__content--button {
-        border: 1px solid var(--mc-secondary-500);
-    }
-}
-
 // Item 1 — logo (só texto) no rodapé: espaço extra abaixo do logo, antes das
 // colunas. Aplicado no wrapper do rodapé (o .theme-logo é flex e não expande
 // com margem no filho); escopa só ao rodapé, sem afetar o logo do topo.
